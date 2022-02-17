@@ -1,11 +1,17 @@
-let pointure = prompt("votre pointure")
-let resultatX2 = (pointure * 2)
-resultat5 = resultatX2 + 5
-resultat50 = resultat5 * 50
-resultat = parseInt(resultat50)
+function calcul(event) {
+    event.preventDefault()
 
-let annee_naissance = prompt("votre année de naissance")
-annee_naissance = parseInt(annee_naissance)
-reponse = resultat + annee_naissance
-parseInt(reponse)
-alert(reponse)
+    let shoes = document.getElementById("shoeSize").value.replace(",", ".")
+    let year = document.getElementById("yearOfBirth").value.replace(",", ".")
+    multiplication = shoes *= 2;
+    addition = multiplication + 5;
+    multiplication2 = addition *= 50;
+    soustraction = multiplication2 - year;
+    adition2 = soustraction + 1766;
+
+    let resultat = adition2
+
+    alert(resultat)
+}
+
+document.querySelector("form").addEventListener("submit", calcul)
